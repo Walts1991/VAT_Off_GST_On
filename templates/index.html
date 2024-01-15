@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAT and GST Calculator</title>
+</head>
+<body>
+    <h1>VAT and GST Calculator</h1>
+    <form method="post">
+        <label for="value">Enter Value:</label>
+        <input type="number" step="0.01" name="value" required>
+        <button type="submit">Calculate</button>
+    </form>
+    
+    {% if result %}
+        <h2>Calculation Result:</h2>
+        <p>Original Value: {{ result['original_value'] }}</p>
+        <p>VAT Removed Value: {{ result['vat_removed_value'] }} (VAT: {{ result['vat_amount'] }})</p>
+        <p>GST Added Value: {{ result['gst_added_value'] }} (GST: {{ result['gst_amount'] }})</p>
+        <p>Final Value: {{ result['final_value'] }}</p>
+    {% endif %}
+</body>
+</html>
