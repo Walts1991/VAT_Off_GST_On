@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- other meta tags... -->
     <title>VAT and GST Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
+
 <body>
     <h1>VAT and GST Calculator</h1>
     <form method="post">
@@ -17,8 +17,8 @@
     {% if result %}
         <h2>Calculation Result:</h2>
         <p>Original Value: {{ result['original_value'] }}</p>
-        <p>VAT Removed Value: {{ result['vat_removed_value'] }} (VAT: {{ result['vat_amount'] }})</p>
-        <p>GST Added Value: {{ result['gst_added_value'] }} (GST: {{ result['gst_amount'] }})</p>
+        <p>20% VAT Removed Value: {{ result['vat_removed_value'] }} (VAT: {{ result['vat_amount'] }})</p>
+        <p>5% GST Added Value: {{ result['gst_added_value'] }} (GST: {{ result['gst_amount'] }})</p>
         <p>Final Value: {{ result['final_value'] }}</p>
     {% endif %}
 </body>
