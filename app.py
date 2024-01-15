@@ -8,16 +8,15 @@ def calculate_tax(value):
     vat_amount = value - vat_removed_value
     
     # Add 5% GST
-    gst_added_value = vat_removed_value * 1.05
-    gst_amount = gst_added_value - vat_removed_value
+    gst_amount = vat_removed_value * 0.05
+    final_value = value + gst_amount
 
     return {
         'original_value': value,
         'vat_removed_value': vat_removed_value,
         'vat_amount': vat_amount,
-        'gst_added_value': gst_added_value,
         'gst_amount': gst_amount,
-        'final_value': round(gst_added_value, 2)  # Round only the final value
+        'final_value': final_value
     }
 
 @app.route('/', methods=['GET', 'POST'])
