@@ -20,7 +20,7 @@
             <h2>Calculation Result:</h2>
             <p><strong>Original Value including 20% VAT%:</strong> {{ "{:.2f}".format(result['original_value']) }}</p>
             <p><strong>Value excluding 20% VAT%:</strong> {{ "{:.2f}".format(result['vat_removed_value']) }} (VAT: {{ "{:.2f}".format(result['vat_amount']) }})</p>
-            <p><strong>Value including 5% GST%:</strong> {{ "{:.2f}".format(result['final_value']) }} (GST Amount: {{ "{:.2f}".format(result['gst_amount']) }})</p>
+            <p><strong>Value including 5% GST%:</strong> {{ "{:.2f}".format(result['final_value']) }} (GST: {{ "{:.2f}".format(result['gst_amount']) }})</p>
         </div>
     {% endif %}
 </body>
