@@ -56,8 +56,11 @@ button:hover {
 .result p {
     font-size: 16px;
     margin-bottom: 10px;
+    text-align: center; /* Center-align the result values */
 }
 
 .result strong {
     font-weight: bold;
-    margin-righ
+    margin-right: 5px;
+    color: #4CAF50;
+}
