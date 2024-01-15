@@ -18,10 +18,10 @@
     {% if result %}
         <div class="result">
             <h2>Calculation Result:</h2>
-            <p><strong>Original Value:</strong> {{ result['original_value'] }}</p>
-            <p><strong>VAT Removed Value:</strong> {{ result['vat_removed_value'] }} (VAT: {{ result['vat_amount'] }})</p>
-            <p><strong>GST Added Value:</strong> {{ result['gst_added_value'] }} (GST: {{ result['gst_amount'] }})</p>
-            <p><strong>Final Value:</strong> {{ result['final_value'] }}</p>
+            <p><strong>Original Value:</strong> {{ "{:.2f}".format(result['original_value']) }}</p>
+            <p><strong>VAT Removed Value:</strong> {{ "{:.2f}".format(result['vat_removed_value']) }} (VAT: {{ "{:.2f}".format(result['vat_amount']) }})</p>
+            <p><strong>GST Added Value:</strong> {{ "{:.2f}".format(result['gst_added_value']) }} (GST: {{ "{:.2f}".format(result['gst_amount']) }})</p>
+            <p><strong>Final Value:</strong> {{ "{:.2f}".format(result['final_value']) }}</p>
         </div>
     {% endif %}
 </body>
